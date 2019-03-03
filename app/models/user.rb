@@ -5,4 +5,6 @@ class User < ApplicationRecord
   validates :username, :email, uniqueness: true
 
   enum role: %i[user admin]
+
+  has_many :posts
 end
